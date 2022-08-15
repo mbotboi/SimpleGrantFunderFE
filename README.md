@@ -1,3 +1,5 @@
+# Grant Funder Front-end
+
 This repo is the frontend code for my Grant Funder dApp that acts as part of my CV
 
 On the main page is my CV that will be used for applying for junior dev roles.
