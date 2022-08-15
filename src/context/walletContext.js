@@ -179,7 +179,10 @@ export const UserProvider = ({ children }) => {
 
     useEffect(() => {
         console.log('GETTING DATA')
-        getData().then(data => setData(data))
+        getData().then(data => {
+            setData(data)
+            console.log("got and set data")
+        })
         walletConnected()
     }, [])
 
