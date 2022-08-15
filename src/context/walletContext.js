@@ -110,7 +110,7 @@ export const UserProvider = ({ children }) => {
             const { amount, grantId } = fundForm
             const bnAmount = ethers.utils.parseEther(String(amount))
 
-            const grantData = data.filter(x => x.grantId == grantId)[0]
+            const grantData = data.filter(x => x.grantId === grantId)[0]
             console.log("grant Address", grantData.grantAddress)
 
             const contract = getGrantContract(grantData.grantAddress)
@@ -123,11 +123,11 @@ export const UserProvider = ({ children }) => {
             const allowance = await erc20.allowance(currentAccount, grantData.grantAddress)
             console.log("allowance", allowance)
             if (allowance.lt(bnAmount)) {
-                erc20.approve(grantData.grantAddress, ethers.constants.MaxUint256).
-                    then(tx => {
+                erc20.approve(grantData.grantAddress, ethers.constants.MaxUint256)
+                    .then(tx => {
                         console.log("approved")
-                        tx.wait().
-                            then(contract.fundGrant(bnAmount))
+                        tx.wait()
+                            .then(contract.fundGrant(bnAmount))
                     })
             } else {
                 contract.fundGrant(bnAmount)
@@ -147,7 +147,7 @@ export const UserProvider = ({ children }) => {
             const { amount, grantId } = fundForm
             const bnAmount = ethers.utils.parseEther(String(amount))
 
-            const grantData = data.filter(x => x.grantId == grantId)[0]
+            const grantData = data.filter(x => x.grantId === grantId)[0]
             console.log("grant Address", grantData.grantAddress)
 
             const contract = getGrantContract(grantData.grantAddress)
@@ -163,13 +163,13 @@ export const UserProvider = ({ children }) => {
         try {
             if (!ethereum) return ("please install a web3 browser wallet")
             console.log("grantId", grantId)
-            const grantData = data.filter(x => x.grantId == grantId)[0]
+            const grantData = data.filter(x => x.grantId === grantId)[0]
             console.log("grant Address", grantData.grantAddress)
             console.log('claimant acc', currentAccount)
 
             const contract = getGrantContract(grantData.grantAddress)
             console.log("unlocked", await contract.unlocked())
-            console.log("caller is recipient", (await contract.recipient()).toLowerCase() == currentAccount.toLowerCase())
+            console.log("caller is recipient", (await contract.recipient()).toLowerCase() === currentAccount.toLowerCase())
             contract.claimGrant()
         } catch (e) {
             console.error(e)

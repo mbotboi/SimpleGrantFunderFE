@@ -1,5 +1,4 @@
-import { Button, FloatingCard } from '.';
-import React, { useContext, useState } from 'react'
+import React from 'react'
 
 import hhLogo from '../images/hardhat_logo.svg'
 import alchemy from '../images/alchemy.png'
@@ -8,8 +7,6 @@ import {
     SiJavascript, SiPython, SiSolidity, SiReact, SiPandas,
     SiTwitter, SiGithub, SiTailwindcss
 } from 'react-icons/si'
-
-const content = require('../content/landingPageContent.json')
 
 const SubCat = ({ text }) => { return (<p className="font-semibold text-lg">{text}</p>) }
 const ContentRows = ({ contents, subTitle, type, numItems }) => {
@@ -76,8 +73,8 @@ const CV = (props) => {
                     ]} />
 
                     <ContentRows subTitle={"Socials"} type="symbol" contents={[
-                        <a href="https://twitter.com/m_botboi" target="_blank"><SiTwitter className="text-blue-400" /></a>,
-                        <a href="https://github.com/mbotboi" target="_blank"><SiGithub /></a>,
+                        <a href="https://twitter.com/m_botboi" target="_blank" rel="noreferrer"><SiTwitter className="text-blue-400" /></a>,
+                        <a href="https://github.com/mbotboi" target="_blank" rel="noreferrer"><SiGithub /></a>,
                     ]} />
                 </ul>
             </div>

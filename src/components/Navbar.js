@@ -18,7 +18,6 @@ const NavBarItem = ({ title, classProps }) => {
     )
 }
 
-
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(true)
     const { connectWallet, currentAccount} = useContext(UserContext)

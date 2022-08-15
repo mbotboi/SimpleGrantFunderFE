@@ -1,10 +1,6 @@
-import { AiFillPlayCircle } from 'react-icons/ai'
-import { Siethereum } from 'react-icons/si'
-import { BsInfoCircle } from 'react-icons/bs'
-import { AiOutlineClose } from 'react-icons/ai'
 import React, { useState, useContext } from 'react'
 
-import { Loader, Button, GrantTable, TxPopUp } from '../components';
+import { Button, GrantTable, TxPopUp } from '../components';
 import { UserContext } from '../context/walletContext'
 
 const CreateGrant = (props) => {

@@ -9,7 +9,7 @@ const ProjectsText = ({ text }) => {
     return text.map(x => {
         if (x.includes("bold_")) {
             return <p className="font-semibold">{x.split("bold_")}</p>
-        } else if (x == "break") {
+        } else if (x === "break") {
             return <br />
         }
         else if (x.includes("list_")) {
@@ -70,18 +70,18 @@ const Welcome = () => {
                                         <div>
                                             <h2 className="text-2xl font-semibold">Smart Contracts</h2>
                                             <div className="ml-3">
-                                                <a href="https://goerli.etherscan.io/address/0xab1fc6b1e5fa0a8af497e6ecde33fb6b2973a381" target="_blank">
+                                                <a href="https://goerli.etherscan.io/address/0xab1fc6b1e5fa0a8af497e6ecde33fb6b2973a381" target="_blank" rel="noreferrer">
                                                     <p className="text-lg text-blue-300">Factory</p></a>
-                                                <a href="https://goerli.etherscan.io/address/0x967265c474561821e7518B13aA447834541b6091" target="_blank">
+                                                <a href="https://goerli.etherscan.io/address/0x967265c474561821e7518B13aA447834541b6091" target="_blank" rel="noreferrer"> 
                                                     <p className="text-lg text-blue-300">Query</p>
                                                 </a>
-                                                <a href="https://github.com/mbotboi/simpleGrantFunder" target="_blank">
+                                                <a href="https://github.com/mbotboi/simpleGrantFunder" target="_blank" rel="noreferrer">
                                                     <p className="text-lg text-blue-300">Github Repo</p>
                                                 </a>
                                             </div>
                                             <h2 className="text-2xl font-semibold">Front End</h2>
                                             <div className="ml-3">
-                                                <a href="https://github.com/mbotboi/SimpleGrantFunderFE" target="_blank">
+                                                <a href="https://github.com/mbotboi/SimpleGrantFunderFE" target="_blank" rel="noreferrer">
                                                     <p className="text-lg text-blue-300">Github Repo</p>
                                                 </a>
                                             </div>
@@ -139,11 +139,3 @@ const Welcome = () => {
     )
 }
 export default Welcome
-/**
- * TODO
- * add contract link                done
- * add github repos links           done
- * use real data 
- * delete example data
- * do final tests
- */

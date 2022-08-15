@@ -1,6 +1,4 @@
 import { Button, FloatingCard } from '.';
-import { AiOutlineClose } from 'react-icons/ai'
-
 
 const TxPopUp = (props) => {
     const { inputs, handleChange, handleSubmit, toggle } = props

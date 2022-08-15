@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Button = (props) => {
     const { onClick, text, buttonClass, inButtonClass } = props
     return (<button

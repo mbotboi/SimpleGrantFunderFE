@@ -1,8 +1,7 @@
 import { shortenAddress } from '../utils'
-import React, { useState, useContext, useEffect } from 'react'
+import React, {useContext} from 'react'
 import { UserContext } from '../context/walletContext'
 import { Button, Loader } from '../components';
-import { ethers } from 'ethers';
 
 const ActionButton = ({ text, onClick, grantId, buttonClass }) => {
     const { setFundForm } = useContext(UserContext)
@@ -37,14 +36,14 @@ function populate(x, theader, buttonProps, type) {
     return <tr className="border-b border-b-gray-700 items-center justify-center">{
         theader.map(y => {
             let content;
-            if (y == "unlock") {
+            if (y === "unlock") {
                 const date = new Date(x[y] * 1000);
                 content = date.getDate() + "/" + (date.getMonth() + 1) +
                     "/" + date.getFullYear() + " " + date.getHours() +
                     ":" + date.getMinutes() + ":" + date.getSeconds();
             } else if (y === "recipient" || y === "tokenAddress") {
                 content = shortenAddress(x[y])
-            } else if (y == "balance") {
+            } else if (y === "balance") {
                 content = x[y]
             } else {
                 content = x[y]

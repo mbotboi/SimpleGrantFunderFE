@@ -1,11 +1,9 @@
 import React, { useContext} from 'react'
 import { UserContext } from '../context/walletContext'
-
 import { GrantTable} from '../components';
 
 const Grants = () => {
     const { currentAccount, claimGrant } = useContext(UserContext)
-    // const [toggleClaim, setToggleClaim] = useState(false)
 
     const handleSubmit = (grantId) => {
         if (!currentAccount) {
