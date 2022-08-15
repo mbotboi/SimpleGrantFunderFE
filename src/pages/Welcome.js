@@ -81,7 +81,7 @@ const Welcome = () => {
                                             </div>
                                             <h2 className="text-2xl font-semibold">Front End</h2>
                                             <div className="ml-3">
-                                                <a href="" target="_blank">
+                                                <a href="https://github.com/mbotboi/SimpleGrantFunderFE" target="_blank">
                                                     <p className="text-lg text-blue-300">Github Repo</p>
                                                 </a>
                                             </div>
