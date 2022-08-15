@@ -11,5 +11,4 @@ const Button = (props) => {
         <p className={`text-white text-base font-semibold mx-4 ${inButtonClass}`}>{text}</p>
     </button>)
 }
-
 export default Button
