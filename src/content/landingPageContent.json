@@ -1,0 +1,46 @@
+{
+    "websiteSubText": "An example project for my application to be land a junior dev role for solidity / js",
+    "aboutMe": [
+        "Since I first discovered it, the concept of decentralisation via crypto has highly intrigued me. It was empowering to think that we no longer have to conform to outdated methodology, constrained by man made rules to control and suppress people.  The ability to be financially unrestricted and the composability that comes with using and building on top the blockchain are alluring. From my perspective, the possibilities and opportunities that one has as a buidler in this space is unlike any other industry before. Hence why I am making this effort to be part of this movement.",
+        "break",
+        "bold_ Why Hire Me:",
+        "list_ First hand experience in being a degenerate, using various protocols across various chains",
+        "list_ I am for decentralisation and building protocols on top of decentralised infrastructure. Eg: this is hosted via IPFS (tho I have to use Pinata)",
+        "list_ I am actively learning about new protocols and EVM related stuff, as well as improving my own skills",
+        "bold_ Soft Skills:",
+        "list_ Web3 Culture Ethos - fast, driven, and anon",
+        "list_ Team Player - love working with-, learning from- and helping other people",
+        "list_ Accountability - celebrating wins and accepting and learning from mistakes and failures",
+        "list_ Hardworking - driven and have high self-initiative, especially when there is a bigger purpose"
+    ],
+    "nftArbBot": [
+        "After getting more familiar with writing contracts and unit testing, the thought of writing an NFT atomic arbitrage bot was compelling. The growing usable marketplaces for NFTs meant that more price discrepancies and opportunities for arbs arose. The trickiest bit was integrating each protocol into the arb system.",
+        "break",
+        "bold_ Things done:",
+        "list_ Successfully integrated Opensea(pre-Seaport upgrade) and NFTX for a 3 way arb into my smart contract;",
+        "list_ Integrated a listener via WSS for Opensea to act as a trigger to run queries for arb opps between OS, LooksRare and NFTX;",
+        "list_ Kept bot running using Docker and hardhat for reliable and easy continuous running;",
+        "list_ Pulled all hair out because Opensea dev tools were a massive pain in the butt."
+    ],
+    "telegramAlerts": [
+        "This is where I really started getting into coding and gaining more practical experience. Using using Python to query various APIs and to find and signal alpha to various groups I partake in.",
+        "break",
+        "bold_ Examples:",
+        "bold_ 2021:",
+        "list_ Trending tokens from Coingecko, Dextools, Moontools;",
+        "list_ Daily alerts from Defillama for top TVL change and other relevant metrics;",
+        "list_ NFT bot to track floors based on commands given.",
+        "bold_ 2022:",
+        "list_ Daily alerts from various APIs for specific market data."
+    ],
+    "sniperAndEvilDetector": [
+        "There is high alpha in sniping the initial liquidity add for new pairs. Hence I decided to learn and build a bot for this in January of 2022. Simultaneously switching from Python to NodeJS.",
+        "This was also a perfect time to learn Solidity. @devan_non had a great repo where I learnt a lot about using Hardhat and Solidity.",
+        "break",
+        "bold_ Things done:",
+        "list_ Simulate the swap transaction to detect evil token on forked network via Hardhat;",
+        "list_ Used 'constructor only' contract on the network for running tests;",
+        "list_ Websocket to listen for liquidity add events on UniV2;",
+        "list_ Mempool listener using bloxroute to snipe NFT mints."
+    ]
+}
