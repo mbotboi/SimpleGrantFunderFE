@@ -8,7 +8,7 @@ const App = () => {
       <div className="gradient-bg-welcome text-white">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Welcome />} />
+          <Route path="" element={<Welcome />} />
           <Route path="/grants" element={<Grants />} />
           <Route path="/my-grants" element={<MyGrants />} />
         </Routes>
