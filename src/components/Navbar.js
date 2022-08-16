@@ -20,7 +20,7 @@ const NavBarItem = ({ title, classProps }) => {
 }
 
 const Navbar = () => {
-    const [toggleMenu, setToggleMenu] = useState(true)
+    const [toggleMenu, setToggleMenu] = useState(false)
     const { connectWallet, currentAccount} = useContext(UserContext)
 
     const navBarText = ["Grants", "My Grants"]

@@ -50,7 +50,7 @@ const Welcome = () => {
 
     return (
         <div className="w-full h-full md:flex items-center justify-center">
-            <div className="md:flex items-center justify-center pb-4">
+            <div className="md:flex justify-center pb-4">
                 <Section content={
                     <div className="flex flex-1 justify-start flex-col md:mr-10 ">
                         <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
@@ -105,7 +105,7 @@ const Welcome = () => {
                                     ["Telegram Alert Bots", "Token Sniper / Evil Token Detector", "NFT Arb Bot",].map(
                                         (x, index) => (<Button text={x}
                                             buttonClass="info-button-bg  mr-3 rounded-2xl w-28 h-32 my-0"
-                                            inButtonClass="text-sm"
+                                            inButtonClass="text md:text-sm"
                                             onClick={togglesArray[index]}
                                         ></Button>)
                                     )
@@ -115,22 +115,26 @@ const Welcome = () => {
                 } />
 
                 {toggleAboutme && <FloatingCard toggle={setToggleAboutme_}
-                    cardPosition="mb-56 w-3/5 h-2/5"
+                    cardPosition="mt-32 w-3/5 h-2/5"
+                    title="About Me"
                     content={<ProjectsText text={content.aboutMe}></ProjectsText>}
                 ></FloatingCard>
                 }
                 {toggleTgBotDescription && <FloatingCard toggle={setToggleTgBotDescription_}
-                    cardPosition="mb-56 w-3/5 h-2/5"
+                    cardPosition="mt-32 w-3/5 h-2/5"
+                    title="Telegram Alert Bots"
                     content={<ProjectsText text={content.telegramAlerts}></ProjectsText>}
                 ></FloatingCard>
                 }
                 {toggleSniperDescription && <FloatingCard toggle={setToggleSniperDescription_}
-                    cardPosition="mb-56 w-3/5 h-2/5"
+                    cardPosition="mt-32 w-3/5 h-2/5"
+                    title="Token Sniper / Evil Token Detector"
                     content={<ProjectsText text={content.sniperAndEvilDetector}></ProjectsText>}
                 ></FloatingCard>
                 }
                 {toggleArbDescription && <FloatingCard toggle={setToggleArbDescription_}
-                    cardPosition="mb-56 w-3/5 h-2/5"
+                    cardPosition="mt-32 w-3/5 h-2/5"
+                    title="NFT Arb Bot"
                     content={<ProjectsText text={content.nftArbBot}></ProjectsText>}
                 ></FloatingCard>
                 }
@@ -139,3 +143,4 @@ const Welcome = () => {
     )
 }
 export default Welcome
+

@@ -6,3 +6,4 @@ export { default as GrantTable} from './GrantTable';
 export { default as TxPopUp} from './TxPopUp';
 export { default as FloatingCard} from './FloatingCard';
 export { default as CV} from './CV';
+export { default as GrantsMobile} from './GrantsMobile';

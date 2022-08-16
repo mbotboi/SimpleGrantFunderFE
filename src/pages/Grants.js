@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 
-import { Button, GrantTable, TxPopUp } from '../components';
+import { Button, GrantTable, TxPopUp, GrantsMobile } from '../components';
 import { UserContext } from '../context/walletContext'
 
 const CreateGrant = (props) => {
@@ -94,7 +94,7 @@ const Grants = () => {
     return (
         <div className="w-full justify-center items-center">
             <div className="flex flex-col justify-center items-center">
-                <div className="w-4/6">
+                <div className="hidden md:block w-4/6">
                     {
                         toggleMenu && (<CreateGrant toggle={toggleCreate}></CreateGrant>)
                     }
@@ -111,6 +111,24 @@ const Grants = () => {
                         <h1 className="flex text-4xl p-8">Inactive Grants</h1>
                     </div>
                     <GrantTable type={"inactive"} buttonProps={{ text: "", onClick: "", }} />
+                </div>
+
+                <div className=" md:hidden w-4/6">
+                    {
+                        toggleMenu && (<CreateGrant toggle={toggleCreate}></CreateGrant>)
+                    }
+                    <div className="flex w-full justify-between">
+                        <h1 className="flex text-4xl p-8">Active Grants</h1>
+                        <Button text={"Create Grant"} onClick={toggleCreate} buttonClass="mr-8" inButtonClass="mx-3" ></Button>
+                    </div>
+                    {toggleFund && (<FundGrant toggle={toggleFund_}></FundGrant>)}
+                    {toggleRemove && (<RemoveFund toggle={toggleRemove_}></RemoveFund>)}
+                    <GrantsMobile type={"active"} buttonProps={{ text: "Fund", onClick: toggleFund_, }} />
+
+                    <div className="flex w-full justify-between">
+                        <h1 className="flex text-4xl p-8">Inactive Grants</h1>
+                    </div>
+                    <GrantsMobile type={"inactive"} buttonProps={{ text: "", onClick: "", }} />
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import { shortenAddress } from '../utils'
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import { UserContext } from '../context/walletContext'
 import { Button, Loader } from '../components';
 
@@ -51,6 +51,7 @@ function populate(x, theader, buttonProps, type) {
             return <td className="px-6 py-4 whitespace-nowrap text-sm font-medium  text-gray-100">{content}</td>
         })
     }
+
         <ActionButton text={text} onClick={onClick} grantId={x.grantId}></ActionButton>
         {type === "active" && (
             <ActionButton text={"Remove"} onClick={onClick} grantId={x.grantId} buttonClass="ml-5"></ActionButton>
