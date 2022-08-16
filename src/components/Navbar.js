@@ -1,6 +1,7 @@
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { AiOutlineClose } from 'react-icons/ai'
 import React, { useState, useContext } from 'react'
+import { NavLink } from 'react-router-dom';
 import logo from '../images/logo.png'
 
 import { Button } from './';
@@ -11,9 +12,9 @@ const NavBarItem = ({ title, classProps }) => {
     const link = title.toLowerCase().split(" ").join('-')
     return (
         <li className={`mx-4 cursor-pointer ${classProps}`} >
-            <a href={link}>
+            <NavLink to={link}>
                 {title}
-            </a>
+            </NavLink>
         </li>
     )
 }
