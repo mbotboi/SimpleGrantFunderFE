@@ -9,13 +9,21 @@ import {
 } from 'react-icons/si'
 
 const SubCat = ({ text }) => { return (<p className="font-semibold text-lg">{text}</p>) }
-const ContentRows = ({ contents, subTitle, type, numItems }) => {
-    if (!numItems) { numItems = 3 }
+const ContentRows = ({ contents, subTitle, type}) => {
+    const sharedClass = "w-full flex p-2 items-center"
     return (<li className="mb-4">
         {type === "symbol" && (
             <div>
                 <SubCat text={subTitle} />
-                <ul className={`grid grid-cols-${numItems} md:grid-cols-3 gap-2 w-full flex p-2 items-center justify-around md:text-3xl`}>
+                <ul className={`${sharedClass} grid grid-cols-3 gap-2 justify-around md:text-3xl`}>
+                    {contents.map(x => (<li className="">{x}</li>))}
+                </ul>
+            </div>
+        )}
+        {type === "buttons" && (
+            <div>
+                <SubCat text={subTitle} />
+                <ul className={`${sharedClass} grid grid-cols-1 md:grid-cols-3 gap-2 justify-around md:text-3xl`}>
                     {contents.map(x => (<li className="">{x}</li>))}
                 </ul>
             </div>
@@ -23,7 +31,7 @@ const ContentRows = ({ contents, subTitle, type, numItems }) => {
         {type === "text" && (
             <div>
                 <SubCat text={subTitle} />
-                <div className="w-full flex p-2 items-center text-3xl">
+                <div className="${sharedClass} text-3xl">
                     {contents}
                 </div>
             </div>
@@ -60,7 +68,7 @@ const CV = (props) => {
                             Crypto Degen ca. 2018 | DeFi Maxi | NFT connoisseur | 🦇🔊 Money Lover
                         </p>
                     ]} />
-                    <ContentRows subTitle={"Personal Projects"} type="symbol" numItems={1} contents={buttons} />
+                    <ContentRows subTitle={"Personal Projects"} type="buttons" contents={buttons} />
                     <ContentRows subTitle={"Language Proficiency"} type="text" contents={[
                         <p className="text-base">English | German | Malaysian</p>
                     ]} />

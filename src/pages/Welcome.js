@@ -106,8 +106,8 @@ const Welcome = () => {
                                 (
                                     ["Telegram Alert Bots", "Token Sniper / Evil Token Detector", "NFT Arb Bot",].map(
                                         (x, index) => (<Button text={x}
-                                            buttonClass="info-button-bg  mr-3 rounded-2xl w-28 h-32 my-0"
-                                            inButtonClass="text md:text-sm"
+                                            buttonClass="info-button-bg mr-3 rounded-2xl w-28 h-32 my-0"
+                                            inButtonClass="text-sm"
                                             onClick={togglesArray[index]}
                                         ></Button>)
                                     )
