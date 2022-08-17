@@ -23,7 +23,7 @@ const ContentRows = ({ contents, subTitle, type}) => {
         {type === "buttons" && (
             <div>
                 <SubCat text={subTitle} />
-                <ul className={`${sharedClass} grid grid-cols-1 md:grid-cols-3 gap-2 justify-around md:text-3xl`}>
+                <ul className={`${sharedClass} grid grid-cols-2 md:grid-cols-3 gap-2 justify-around md:text-3xl`}>
                     {contents.map(x => (<li className="">{x}</li>))}
                 </ul>
             </div>
@@ -43,7 +43,6 @@ const CV = (props) => {
     const { title, buttons, aboutMeButton } = props
     return (
         <div className="container mx-auto flex items-start w-full">
-
             <div className="w-full p-3 shadow-2x1 items-start rounded-2xl white-glassmorphism">
                 <div className="w-full flex items-center justify-between px-3">
                     <h2 className="text-2xl fond-bold mb-2 ">{title}</h2>

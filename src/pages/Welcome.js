@@ -23,7 +23,8 @@ const ProjectsText = ({ text }) => {
 }
 
 const Section = (props) => (
-    <div className="w-11/12 md:w-1/2 md:p-10 mb-16 ">
+    <div className="md:w-1/2 md:p-10 mb-16 ">
+    {/* <div className=""> */}
         {props.content}
     </div>
 )
@@ -50,7 +51,7 @@ const Welcome = () => {
 
     return (
         <div className="w-full h-full md:flex items-center justify-center">
-            <div className="md:flex justify-center pb-4 mx-5">
+            <div className="md:flex justify-center mx-5">
                 <Section content={
                     <div className="flex flex-1 justify-start flex-col md:mr-10 md:mt-72">
                         <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
@@ -97,8 +98,8 @@ const Welcome = () => {
                     </div>
                 } />
                 <Section content={
-                    <div className="flex items-center">
-                        <div className="mx-5">
+                    <div className="md:flex md:items-center">
+                        <div className="hidden md:block mx-5">
                             <img src={pfp} alt="logo" className="w-40 cursor-pointer rounded-full" />
                         </div>
                         <CV title={"Mbotboi CV"}
@@ -140,7 +141,9 @@ const Welcome = () => {
                     content={<ProjectsText text={content.nftArbBot}></ProjectsText>}
                 ></FloatingCard>
                 }
+                <p className="invisible">pizza</p>
             </div>
+
         </div>
     )
 }
