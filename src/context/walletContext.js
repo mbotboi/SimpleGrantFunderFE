@@ -7,7 +7,6 @@ const { ethereum } = window
 
 const getFactoryContract = async () => {
     const { address, abi } = require('../contracts/GrantFactory.json')
-
     const provider = new ethers.providers.Web3Provider(ethereum)
     const signer = provider.getSigner()
     const contract = new ethers.Contract(address, abi, signer)
@@ -24,7 +23,6 @@ const getGrantContract = (grantAddress) => {
 
 const getData = async () => {
     const { address, abi } = require('../contracts/GrantsQuery.json')
-    const { ethereum } = window
     const provider = new ethers.providers.Web3Provider(ethereum)
     const contract = new ethers.Contract(address, abi, provider)
     const allData = await contract.getAllGrants()
@@ -47,6 +45,15 @@ export const UserProvider = ({ children }) => {
 
     const [createGrantForm, setCreateGrantForm] = useState({ recipient: "", tokenaddress: "", unlock: "" })
     const [fundForm, setFundForm] = useState({ amount: "", grantId: "" })
+
+    const checkNetwork = async () => {
+        const provider = new ethers.providers.Web3Provider(ethereum)
+        const network = await provider.getNetwork()
+        if (network.chainId != 5) {
+            return alert("Please Connect to Goerli Test Network to load grants data")
+        }
+    }
+
 
     const walletConnected = async () => {
         try {
@@ -178,11 +185,15 @@ export const UserProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        console.log('GETTING DATA')
-        getData().then(data => {
-            setData(data)
-            console.log("got and set data")
-        })
+        checkNetwork().then(() => {
+            console.log('GETTING DATA')
+            getData().then(data => {
+                setData(data)
+                console.log("got and set data")
+            })
+        }
+        )
+
         walletConnected()
     }, [])
 
