@@ -57,6 +57,7 @@ const Welcome = () => {
                             Fund Cats <br /> across the world!
                         </h1>
                         <p className="mt-5 md:w9/12 w-11/12">{content.websiteSubText}</p>
+                        <p className="text-sm">*please connect to goerli test network to load grants data</p>
                         {
                             !currentAccount && (
                                 <Button text={"Connect Wallet"} onClick={connectWallet} ></Button>
