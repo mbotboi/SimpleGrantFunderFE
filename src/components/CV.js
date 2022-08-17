@@ -42,12 +42,12 @@ const CV = (props) => {
                     {aboutMeButton}
                 </div>
                 <ul className="pl-3">
-                    <ContentRows subTitle={"Programming Languages"} type="symbol" contents={[
+                    <ContentRows subTitle={"Programming Languages"} type="symbol" numItems={3} contents={[
                         <SiJavascript className="text-yellow-400" />,
                         <SiPython className="text-blue-400" />,
                         <SiSolidity className="text-gray-400" />
                     ]} />
-                    <ContentRows subTitle={"Frameworks & Tools"} type="symbol" contents={[
+                    <ContentRows subTitle={"Frameworks & Tools"} type="symbol" numItems={3} contents={[
                         <SiReact className="text-blue-300" />,
                         <SiPandas className="text-blue-400" />,
                         <SiTailwindcss className="text-blue-300" />,
@@ -57,7 +57,7 @@ const CV = (props) => {
                     ]} />
                     <ContentRows subTitle={"Crypto Experience"} type="text" contents={[
                         <p className="text-base">
-                            Crypto Degen ca. 2018 | DeFi Maxi | NFT connoisseur | <br />🦇🔊 Money Lover
+                            Crypto Degen ca. 2018 | DeFi Maxi | NFT connoisseur | 🦇🔊 Money Lover
                         </p>
                     ]} />
                     <ContentRows subTitle={"Personal Projects"} type="symbol" numItems={1} contents={buttons} />
@@ -72,7 +72,7 @@ const CV = (props) => {
                         </p>
                     ]} />
 
-                    <ContentRows subTitle={"Socials"} type="symbol" contents={[
+                    <ContentRows subTitle={"Socials"} type="symbol" numItems={3} contents={[
                         <a href="https://twitter.com/m_botboi" target="_blank" rel="noreferrer"><SiTwitter className="text-blue-400" /></a>,
                         <a href="https://github.com/mbotboi" target="_blank" rel="noreferrer"><SiGithub /></a>,
                     ]} />

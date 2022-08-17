@@ -50,9 +50,9 @@ const Welcome = () => {
 
     return (
         <div className="w-full h-full md:flex items-center justify-center">
-            <div className="md:flex justify-center pb-4">
+            <div className="md:flex justify-center pb-4 mx-5">
                 <Section content={
-                    <div className="flex flex-1 justify-start flex-col md:mr-10 ">
+                    <div className="flex flex-1 justify-start flex-col md:mr-10 md:mt-72">
                         <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
                             Fund Cats <br /> across the world!
                         </h1>
@@ -66,13 +66,15 @@ const Welcome = () => {
                         {
                             toggleLinks && (
                                 <FloatingCard toggle={setToggleLinks_}
+                                    cardPosition="ml-32 md:w-1/5"
+
                                     content={(
                                         <div>
                                             <h2 className="text-2xl font-semibold">Smart Contracts</h2>
                                             <div className="ml-3">
                                                 <a href="https://goerli.etherscan.io/address/0xab1fc6b1e5fa0a8af497e6ecde33fb6b2973a381" target="_blank" rel="noreferrer">
                                                     <p className="text-lg text-blue-300">Factory</p></a>
-                                                <a href="https://goerli.etherscan.io/address/0x967265c474561821e7518B13aA447834541b6091" target="_blank" rel="noreferrer"> 
+                                                <a href="https://goerli.etherscan.io/address/0x967265c474561821e7518B13aA447834541b6091" target="_blank" rel="noreferrer">
                                                     <p className="text-lg text-blue-300">Query</p>
                                                 </a>
                                                 <a href="https://github.com/mbotboi/simpleGrantFunder" target="_blank" rel="noreferrer">
@@ -113,27 +115,32 @@ const Welcome = () => {
                             }></CV>
                     </div>
                 } />
-
+                {/* <FloatingCard toggle={setToggleAboutme_}
+                    cardPosition="top-0 mt-32 "
+                    title="About Me"
+                    content={<ProjectsText text={content.aboutMe}></ProjectsText>}
+                ></FloatingCard> */}
                 {toggleAboutme && <FloatingCard toggle={setToggleAboutme_}
-                    cardPosition="mt-32 w-3/5 h-2/5"
+                    cardPosition="top-0 mt-32 md:mt-64 w-11/12 h-3/5 md:w-3/5 md:h-4/5"
+                    // cardPosition="mt-32 w-3/5 h-4/5"
                     title="About Me"
                     content={<ProjectsText text={content.aboutMe}></ProjectsText>}
                 ></FloatingCard>
                 }
                 {toggleTgBotDescription && <FloatingCard toggle={setToggleTgBotDescription_}
-                    cardPosition="mt-32 w-3/5 h-2/5"
+                    cardPosition="top-0 mt-32 md:mt-64 w-11/12 h-3/5 md:w-3/5 md:h-4/5"
                     title="Telegram Alert Bots"
                     content={<ProjectsText text={content.telegramAlerts}></ProjectsText>}
                 ></FloatingCard>
                 }
                 {toggleSniperDescription && <FloatingCard toggle={setToggleSniperDescription_}
-                    cardPosition="mt-32 w-3/5 h-2/5"
+                    cardPosition="top-0 mt-32 md:mt-64 w-11/12 h-3/5 md:w-3/5 md:h-4/5"
                     title="Token Sniper / Evil Token Detector"
                     content={<ProjectsText text={content.sniperAndEvilDetector}></ProjectsText>}
                 ></FloatingCard>
                 }
                 {toggleArbDescription && <FloatingCard toggle={setToggleArbDescription_}
-                    cardPosition="mt-32 w-3/5 h-2/5"
+                    cardPosition="top-0 mt-32 md:mt-64 w-11/12 h-3/5 md:w-3/5 md:h-4/5"
                     title="NFT Arb Bot"
                     content={<ProjectsText text={content.nftArbBot}></ProjectsText>}
                 ></FloatingCard>
