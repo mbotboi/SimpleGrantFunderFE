@@ -115,14 +115,8 @@ const Welcome = () => {
                             }></CV>
                     </div>
                 } />
-                {/* <FloatingCard toggle={setToggleAboutme_}
-                    cardPosition="top-0 mt-32 "
-                    title="About Me"
-                    content={<ProjectsText text={content.aboutMe}></ProjectsText>}
-                ></FloatingCard> */}
                 {toggleAboutme && <FloatingCard toggle={setToggleAboutme_}
                     cardPosition="top-0 mt-32 md:mt-64 w-11/12 h-3/5 md:w-3/5 md:h-4/5"
-                    // cardPosition="mt-32 w-3/5 h-4/5"
                     title="About Me"
                     content={<ProjectsText text={content.aboutMe}></ProjectsText>}
                 ></FloatingCard>
