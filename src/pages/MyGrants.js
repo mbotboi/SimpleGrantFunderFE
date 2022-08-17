@@ -19,7 +19,7 @@ const Grants = () => {
                     <GrantTable walletAddress={currentAccount} buttonProps={{ text: "Claim", onClick: handleSubmit }}
                     />
                 </div>
-                <div className="md:hidden w-4/6">
+                <div className="md:hidden w-11/12">
                     <h1 className="flex text-4xl text-white p-8">My Grants</h1>
                     <GrantsMobile walletAddress={currentAccount} buttonProps={{ text: "Claim", onClick: handleSubmit }}
                     />

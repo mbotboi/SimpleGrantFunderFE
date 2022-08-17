@@ -113,18 +113,17 @@ const Grants = () => {
                     <GrantTable type={"inactive"} buttonProps={{ text: "", onClick: "", }} />
                 </div>
 
-                <div className=" md:hidden w-4/6">
+                <div className=" md:hidden w-11/12">
                     {
                         toggleMenu && (<CreateGrant toggle={toggleCreate}></CreateGrant>)
                     }
                     <div className="flex w-full justify-between">
-                        <h1 className="flex text-4xl p-8">Active Grants</h1>
-                        <Button text={"Create Grant"} onClick={toggleCreate} buttonClass="mr-8" inButtonClass="mx-3" ></Button>
+                        <h1 className="flex text-4xl">Active Grants</h1>
+                        <Button text={"Create Grant"} onClick={toggleCreate} buttonClass="ml-10" inButtonClass="mx-3 text-sm" ></Button>
                     </div>
                     {toggleFund && (<FundGrant toggle={toggleFund_}></FundGrant>)}
                     {toggleRemove && (<RemoveFund toggle={toggleRemove_}></RemoveFund>)}
                     <GrantsMobile type={"active"} buttonProps={{ text: "Fund", onClick: toggleFund_, }} />
-
                     <div className="flex w-full justify-between">
                         <h1 className="flex text-4xl p-8">Inactive Grants</h1>
                     </div>

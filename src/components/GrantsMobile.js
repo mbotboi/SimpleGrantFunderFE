@@ -34,8 +34,6 @@ const GrantsMobile = (props) => {
     const { data } = useContext(UserContext)
     const keys = ["grantId", "recipient", "tokenAddress", "balance", "unlock",]
     const { walletAddress, buttonProps, type } = props
-    // console.log(type)
-    // console.log(buttonProps)
     const formatData = (key, grant) => {
         let content;
         if (key === "unlock") {
@@ -76,7 +74,6 @@ const GrantsMobile = (props) => {
                 </div>
                 <div className="flex justify-around">
                     <ActionButton text={text} onClick={onClick} grantId={row.grantId}></ActionButton>
-                    {console.log(type)}
                     {type === "active" && (
                         <ActionButton text={"Remove"} onClick={onClick} grantId={row.grantId} buttonClass="ml-5"></ActionButton>
                     )}
