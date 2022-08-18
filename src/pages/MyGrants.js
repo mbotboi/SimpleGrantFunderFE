@@ -12,7 +12,7 @@ const Grants = () => {
         claimGrant(grantId)
     }
     return (
-        <div className="w-full h-full justify-center items-center">
+        <div className="w-full max-h-full min-h-screen justify-center items-center">
             <div className="flex justify-center items-center">
                 <div className="hidden md:block w-4/6">
                     <h1 className="flex text-4xl text-white p-8">My Grants</h1>

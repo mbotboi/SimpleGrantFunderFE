@@ -50,7 +50,7 @@ const Welcome = () => {
     const togglesArray = [setToggleTgBotDescription_, setToggleSniperDescription_, setToggleArbDescription_]
 
     return (
-        <div className="w-full h-full md:flex items-center justify-center">
+        <div className="w-full max-h-full min-h-screen md:flex items-center justify-center">
             <div className="md:flex justify-center mx-5">
                 <Section content={
                     <div className="flex flex-1 justify-start flex-col md:mr-10 md:mt-72">

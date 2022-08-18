@@ -16,7 +16,7 @@ const App = () => {
             <Route path="/my-grants" element={<MyGrants />} />
           </Routes>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </HashRouter>
   )

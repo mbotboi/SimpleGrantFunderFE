@@ -92,7 +92,7 @@ const Grants = () => {
     }
 
     return (
-        <div className="w-full justify-center items-center">
+        <div className="w-full max-h-full min-h-screen justify-center items-center">
             <div className="flex flex-col justify-center items-center">
                 <div className="hidden md:block w-4/6">
                     {

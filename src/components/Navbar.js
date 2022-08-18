@@ -11,7 +11,7 @@ import { shortenAddress } from '../utils'
 const NavBarItem = ({ title, classProps }) => {
     const link = title.toLowerCase().split(" ").join('-')
     return (
-        <li className={`mx-4 cursor-pointer ${classProps}`} >
+        <li className={`mx-4 cursor-pointer text-xl ${classProps}`} >
             <NavLink to={link}>
                 {title}
             </NavLink>
